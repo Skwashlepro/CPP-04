@@ -6,7 +6,7 @@
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 18:05:24 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 19:34:29 by luctan           ###   ########.fr       */
+/*   Updated: 2025/09/16 20:20:22 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ Animal::~Animal(){
 }
 
 void	Animal::makeSound() const {
-	std::cout << "bweurg" << std::endl;
 }
 
 std::string Animal::getType() const {

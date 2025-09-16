@@ -6,7 +6,7 @@
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 18:00:23 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 18:21:55 by luctan           ###   ########.fr       */
+/*   Updated: 2025/09/16 19:41:22 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal{
 		Animal();
 		Animal(std::string type);
 		virtual ~Animal();
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 		std::string getType() const;
 };
 

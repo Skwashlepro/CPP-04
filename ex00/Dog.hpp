@@ -6,7 +6,7 @@
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/16 18:01:37 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 18:19:50 by luctan           ###   ########.fr       */
+/*   Updated: 2025/09/16 20:17:14 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 class Dog : public Animal{
 	public:
 		Dog();
+		Dog(const Dog& other);
 		~Dog();
+		Dog& operator=(const Dog& other);
 		void	makeSound() const;
 
 };
