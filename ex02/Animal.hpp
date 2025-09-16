@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 18:12:14 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 19:33:53 by luctan           ###   ########.fr       */
+/*   Created: 2025/09/16 18:00:23 by luctan            #+#    #+#             */
+/*   Updated: 2025/09/16 18:21:55 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-Dog::Dog() : Animal("Dog"){
-	std::cout << "Dog constructor called" << std::endl;
-}
+#include <string>
+#include <iostream>
 
-Dog::~Dog(){
-	std::cout << "Dog destructor called" << std::endl;
-}
+class Animal{
+	protected:
+		std::string type;
+	public:
+		Animal();
+		Animal(std::string type);
+		virtual ~Animal();
+		virtual void	makeSound() const;
+		std::string getType() const;
+};
 
-void	Dog::makeSound() const {
-	std::cout << "woof" << std::endl;
-}
+#endif

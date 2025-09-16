@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 18:12:14 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 19:33:53 by luctan           ###   ########.fr       */
+/*   Created: 2025/09/16 19:23:17 by luctan            #+#    #+#             */
+/*   Updated: 2025/09/16 19:34:37 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Brain.hpp"
 
-Dog::Dog() : Animal("Dog"){
-	std::cout << "Dog constructor called" << std::endl;
+Brain::Brain(){
+	std::cout << "Brain alive" << std::endl;
 }
 
-Dog::~Dog(){
-	std::cout << "Dog destructor called" << std::endl;
+Brain::~Brain(){
+	std::cout << "Brain dead" << std::endl;
 }
 
-void	Dog::makeSound() const {
-	std::cout << "woof" << std::endl;
-}

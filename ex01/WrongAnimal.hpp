@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 18:12:14 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 19:33:53 by luctan           ###   ########.fr       */
+/*   Created: 2025/09/16 18:34:03 by luctan            #+#    #+#             */
+/*   Updated: 2025/09/16 18:37:35 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-Dog::Dog() : Animal("Dog"){
-	std::cout << "Dog constructor called" << std::endl;
-}
+#include <string>
+#include <iostream>
 
-Dog::~Dog(){
-	std::cout << "Dog destructor called" << std::endl;
-}
+class WrongAnimal{
+	protected:
+		std::string type;
+	public:
+		WrongAnimal();
+		WrongAnimal(std::string type);
+		~WrongAnimal();
+		void	makeSound() const;
+		std::string getType() const;
+};
 
-void	Dog::makeSound() const {
-	std::cout << "woof" << std::endl;
-}
+#endif

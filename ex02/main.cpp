@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 18:05:24 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 19:33:53 by luctan           ###   ########.fr       */
+/*   Created: 2025/09/16 18:13:53 by luctan            #+#    #+#             */
+/*   Updated: 2025/09/16 19:32:06 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include "Animal.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
-Animal::Animal() : type("blob"){
-	std::cout << "Animal default constructor called" << std::endl;
-}
-
-Animal::Animal(std::string type) : type(type) {
-	std::cout << "Animal constructor called with type: " << type << std::endl;
-}
-
-Animal::~Animal(){
-	std::cout << "Animal destructor called" << std::endl;
-}
-
-void	Animal::makeSound() const {
-	std::cout << "bweurg" << std::endl;
-}
-
-std::string Animal::getType() const {
-	return type;
+int main()
+{
+	Animal* anim[10];
+	for (int i = 0; i < 5; i++){
+		anim[i] = new Dog();
+	}
+	for (int i = 5; i < 10; i++){
+		anim[i] = new Cat();
+	}
+	for (int i = 0; i < 10; i++)
+		delete anim[i];
 }

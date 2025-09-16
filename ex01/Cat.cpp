@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luctan <luctan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/16 18:12:14 by luctan            #+#    #+#             */
-/*   Updated: 2025/09/16 19:33:53 by luctan           ###   ########.fr       */
+/*   Created: 2025/09/16 18:07:31 by luctan            #+#    #+#             */
+/*   Updated: 2025/09/16 19:35:11 by luctan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog() : Animal("Dog"){
-	std::cout << "Dog constructor called" << std::endl;
+Cat::Cat(): Animal("Cat") {
+	std::cout << "Cat born !" << std::endl;
+	_brain = new Brain();
 }
 
-Dog::~Dog(){
-	std::cout << "Dog destructor called" << std::endl;
+Cat::~Cat(){
+	std::cout << "Cat ded.." << std::endl;
+	delete _brain;
 }
 
-void	Dog::makeSound() const {
-	std::cout << "woof" << std::endl;
+void	Cat::makeSound() const {
+	std::cout << "meow" << std::endl;
 }
